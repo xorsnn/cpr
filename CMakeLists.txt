@@ -10,6 +10,8 @@ project(cpr)
 if(NOT ${CMAKE_VERSION} LESS 3.2)
     set(CMAKE_CXX_STANDARD 11)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
+    # Sergey Grigorev patch
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 else()
     message(STATUS "Checking compiler flags for C++11 support.")
     # Set C++11 support flags for various compilers
